@@ -87,9 +87,31 @@ Do this by creating a Simple Agent that can make API calls to the 🤖Agent Node
 
 What are the core components of an `AgentCard`?
 
+##### ✅ Answer:
+1. Identity: name, description, version. You know who you are connecting to. 
+2. url: endpoint to reach the agent.
+3. capabilities: indicates which fundamental extra capabilities the agent supports beyond basic request/response pattern. As of now, it includes streaming, pushNotifications, stateTransitionHistory.
+4. authentication: instructions to do authentication to use the agent.
+5. defaultInputModes / defaultOutputModes: indicates what MIME types (for example, text, images, etc.) are supported by the agent.
+6. skills: provides information about skills the agent can use. Skills in A2A are just informational, so they indicate what an agent can do, while tools in MCP define schema to run the tool.
+
 ### ❓ Question #2:
 
 Why is A2A (and other such protocols) important in your own words?
+
+##### ✅ Answer:
+1. A2A and similar protocols for Agentic communication reduce overheads of connecting different systems to each other. Without protocols developed and promoted by large entities (or opensource protocols supported by a significant community), every agentic ecosystem would require their own set of 'connectors', which would have different specifications. 
+2. Without A2A and similar protocols you'd have to deeply understand the requirements to connect to n Agent ecosystem, its unique setup, etc., but A2A and other protocols remove that need. They introduce a protocol to follow, which, when supported by developers of the agents, expose them to everyone around. 
+3. Security. Unified protocol not only helps us reduce overheads with interoperability, but also provides a security layer: identity and authentication. This reduces (but doesn't remove) the risk of security incidents when connecting with an Agent or agentic ecosystem.
+4. A protocol, essentially, is an abstraction over the mundane issues of connecting somewhere. If everyone adopts the protocol, anyone creating an agent could instantly get everyone else using it and/or can you use everyone's else agent themselves. 
+
+##### Please ignore, I was just comparing A2A and MCP, and then was thinking about A2A marketplace with agents being able to pay
+[I was reviewing it for myself, so please ignore] A2A and MCP serve different purposes, for sure, but it is hard not to compare them. MCP is more about exposing structured capabilities to LLMs in a local environment. This, essentially, provides agents with a way to interact with whatever they need to interact as a toolbox. A2A, however, is more focused on the external side, where different agents can connect to each other and interact to fulfill their goal. 
+Personally, MCP finds underwhelming. It shouldn't be exciting, though! MCPs fulfill an incredibly important function of exposing structured capabilities for agents to use. But A2A actually does get me excited, because even imagining agents interacting with agents doing the work they need on my behalf... That's get me thinking into the future. :) It's really THE time to finally build Alfred, an AI Assistant, that will talk to other agents. 
+
+Also (still feel free to ignore, I guess I started treating it as a journal):
+1. We need A2A marketplace so that we can easily find who to connect to, but that's not important...
+2. We need to somehow provide payment ability in a secure way to our Agents so they can interact with other agents via A2A that rely on using paid functionality, so that the user doesn't need to signup to whatever service provides an agent. Security concerns, for sure, but it can be based on a deposit scheme where transaction doesn't happen immediately but the money are reserved with spending caps, explicit confirmations, or trusted vendors of agents. 
 
 ### 🚧 Advanced Build:
 
