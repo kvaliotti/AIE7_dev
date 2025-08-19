@@ -21,4 +21,10 @@ dependencies = [
     "arxiv>=2.1.0",
     "cryptography==44.0.3",
     "guardrails-ai==0.5.14",
+    "cached-path>=1.7.3",
+    "spacy>=3.8.7",
+    "profanity-check>=1.0.3",
+    "joblib>=1.5.1",
+    "scikit-learn<1.2",
+    "codecov>=2.1.13",
 ]
